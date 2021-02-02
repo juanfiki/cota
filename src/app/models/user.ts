@@ -7,6 +7,5 @@ export class User {
     public age:number,
     public rol:string
 
-    )
-  {}
+    ) {}
 }

@@ -1,4 +1,6 @@
+import {ElementSchemaRegistry} from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
+import {allowedNodeEnvironmentFlags} from 'process';
 import { from } from 'rxjs';
 import {User } from '../../models/user';
 import { UserService} from '../../service/user.service'
@@ -12,28 +14,31 @@ export class RegusuComponent implements OnInit {
 public user :User;
 
   constructor(private userService:UserService) {
-    this.user = new User('','','','',0,'')
+    this.user = new User('','','','',0,'',)
   }
 
   ngOnInit(): void {  }
 
 registrar(){
+
   this.userService.registrarUsuario(this.user).subscribe(
     (res:any) => {
-      if(res.statusCode !== 200){
+      console.log(res);
+      if(res.statusCode != 200){
         alert('no se pudo registrar')
       } else{
         alert('registro exitoso')
       }
     },
     (error) =>{
-      var errorMensaje= <any>error;
+      var errorMensaje = <any>error;
       if(errorMensaje != null){
-        console.log(error)
+
       }
 
 
     }
   )
+  console.log( this.userService);
 }
 }

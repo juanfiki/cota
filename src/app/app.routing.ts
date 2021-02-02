@@ -12,6 +12,6 @@ const appRoutes:Routes=[
  { path:'princi',component:PrinciComponent},
  {path:'gastro', component:GastroComponent},
  {path:'prvin',  component:PrvinComponent },
- {path:'regusu', component:RegusuComponent}
+ {path:'regusu', component:RegusuComponent},
 ]
 export const routing = RouterModule.forRoot(appRoutes)
