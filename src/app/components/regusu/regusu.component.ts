@@ -14,7 +14,7 @@ export class RegusuComponent implements OnInit {
 public user :User;
 
   constructor(private userService:UserService) {
-    this.user = new User('','','','',0,'',)
+    this.user = new User('','','','',)
   }
 
   ngOnInit(): void {  }
